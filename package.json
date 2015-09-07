@@ -1,6 +1,6 @@
 {
   "name": "bind-arguments",
-  "version": "0.0.0",
+  "version": "1.0.0",
   "description": "Bind context (optional) and multiple arguments to function.",
   "repository": "tunnckoCore/bind-arguments",
   "author": "Charlike Mike Reagent <@tunnckoCore> (http://www.tunnckocore.tk)",
