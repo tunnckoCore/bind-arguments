@@ -1,0 +1,40 @@
+{
+  "name": "bind-arguments",
+  "version": "0.0.0",
+  "description": "Bind context (optional) and multiple arguments to function.",
+  "repository": "tunnckoCore/bind-arguments",
+  "author": "Charlike Mike Reagent <@tunnckoCore> (http://www.tunnckocore.tk)",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "test": "standard && node test.js"
+  },
+  "dependencies": {
+    "isarray": "^0.0.0"
+  },
+  "devDependencies": {
+    "assertit": "^0.1.0"
+  },
+  "files": [
+    "index.js"
+  ],
+  "keywords": [
+    "args",
+    "arguments",
+    "argz",
+    "bind",
+    "bind-context",
+    "bind-ctx",
+    "bind-fn",
+    "bindargs",
+    "bindcontext",
+    "bindctx",
+    "bindfn",
+    "bound",
+    "boundfn",
+    "context",
+    "ctx",
+    "fn",
+    "multiple"
+  ]
+}
