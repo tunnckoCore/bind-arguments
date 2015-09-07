@@ -14,21 +14,29 @@ npm i bind-arguments --save
 ## Usage
 > For more use-cases see the [tests](./test.js)
 
+**Params**
+
+- `<fn>` **{Function}** function for binding
+- `<args>` **{Array}** arguments to bind to given `fn`
+- `[ctx]` **{Object}** optional context for the return function
+- `returns` **{Function}** bound function
+
+**Example**
+
 ```js
 var bindArguments = require('bind-arguments')
 
-var args = ['foo', true, 'bar', 123]
-var ctx = {qux: 'qux'}
-
-var boundFn = bindArguments(function fn (foo, bool, bar, num) {
-  console.log(foo, bool, bar, num, this.qux)
+var args = ['foo', 'bar']
+var ctx = {qux: 'baz'}
+var boundFn = bindArguments(function (a, b, c) {
+  return [a, b, c, this.qux]
 }, args, ctx)
+boundFn() //=> ['foo', 'bar', undefined, 'baz']
 
-boundFn()
-//=> foo true bar 123 qux
-
-boundFn.call({qux: 'xyz'})
-//=> foo true bar 123 xyz
+var boundFn2 = bindArguments.call({qux: 'roo'}, function (a, b) {
+  return [a, b, this.qux]
+}, args)
+boundFn2() //=> ['foo', 'bar', 'roo']
 ```
 
 
